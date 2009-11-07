@@ -1,0 +1,33 @@
+body {
+background: #efefef;
+font: 1em Helvetica, Tahoma, Arial;
+color: #333;
+}
+#under_construction {
+width: 960px;
+margin: 70px auto;
+background: url('/images/bor.gif') no-repeat;
+display: block;
+width: 740px;
+height: 322px;
+text-align: center;
+}
+h1 {
+display: none;
+}
+span {
+display: none;
+}
+p {
+padding-top: 350px;
+}
+a {
+color: #235B87;
+text-decoration: none;
+border-bottom: 1px solid #235B87;
+padding: 3px 5px;
+}
+a:hover {
+border: 0;
+background: #D5D5D5;
+}
