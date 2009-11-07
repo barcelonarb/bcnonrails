@@ -21,6 +21,8 @@
   	</div>
   	
     <div id="content">
+      <%= "<div id='error'><span>#{flash[:error]}</span></div>" unless flash[:error].blank? %>
+      <%= "<div id='notice'><span>#{flash[:notice]}</span></div>" unless flash[:notice].blank? %>
       <%= yield %>
     </div>
 

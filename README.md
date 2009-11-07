@@ -9,7 +9,6 @@ Intenciones
 
 ToDo
 ----
-* Añadir recordar contraseña
 
 Dependencias
 ------------
