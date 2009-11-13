@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  #before_filter :require_user, :only => [:new, :create, :edit, :update]
+  before_filter :require_user, :only => [:new, :create, :edit, :update]
   
   def index
     @events = Event.all
