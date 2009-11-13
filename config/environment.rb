@@ -41,4 +41,5 @@ Rails::Initializer.run do |config|
   
   # GEMS
   config.gem "authlogic"
+  config.gem "geokit"
 end

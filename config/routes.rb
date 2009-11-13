@@ -2,11 +2,13 @@ ActionController::Routing::Routes.draw do |map|
   
   map.root :controller => "misc", :action => "home" # optional, this just sets the root route
   
+  map.new_user_session  '/login',                         :controller => 'user_sessions',       :action => 'new'
   map.logout            '/logout',                        :controller => 'user_sessions',      :action => 'destroy'
   
   map.resource :account, :controller => "users"
   map.resource :user_session
   map.resources :password_resets
+  map.resources :events
 
   # The priority is based upon order of creation: first created -> highest priority.
 

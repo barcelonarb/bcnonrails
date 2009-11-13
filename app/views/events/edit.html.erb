@@ -1,0 +1,14 @@
+<% title "Editig event" %>
+<h2><%= yield(:title)%></h2>
+
+<% form_for(@event) do |f| %>
+  <%= f.error_messages %>
+
+  <%= render :partial => "form", :object => f %>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @event %> |
+<%= link_to 'Back', events_path %>
