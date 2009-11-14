@@ -1,20 +1,17 @@
-<p>
-  <b>Title:</b>
-  <%=h @event.title %>
-</p>
+<h2><%=h @event.title %></h2>
 
 <p>
-  <b>Location:</b>
+  <strong>Location:</strong>
   <%=h @event.location %>
 </p>
 
 <p>
-  <b>Description:</b>
-  <%=h @event.description %>
+  <strong>Description:</strong>
+  <%= markdown @event.description %>
 </p>
 
 <p>
-  <b>Date:</b>
+  <strong>Date:</strong>
   <%=h @event.date %>
 </p>
 

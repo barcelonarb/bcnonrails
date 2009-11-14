@@ -42,4 +42,5 @@ Rails::Initializer.run do |config|
   # GEMS
   config.gem "authlogic"
   config.gem "geokit"
+  config.gem "BlueCloth"
 end

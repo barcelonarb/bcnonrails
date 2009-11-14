@@ -10,12 +10,12 @@ Intenciones
 ToDo
 ----
 * Internationalization
-* Borrar restos de scaffold de events
 
 Dependencias
 ------------
 * AuthLogic [http://github.com/binarylogic/authlogic](http://github.com/binarylogic/authlogic "authlogic")
 * Geokit [http://github.com/andre/geokit-gem](http://github.com/andre/geokit-gem "geokit")
+* BlueCloth [http://deveiate.org/projects/BlueCloth](http://deveiate.org/projects/BlueCloth "bluecloth")
 
 Plugins
 --------

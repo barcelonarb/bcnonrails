@@ -10,5 +10,5 @@
   </p>
 <% end %>
 
-<%= link_to 'Show', @event %> |
+<%= link_to 'Destroy', @event, :confirm => 'Are you sure?', :method => :delete %> |
 <%= link_to 'Back', events_path %>

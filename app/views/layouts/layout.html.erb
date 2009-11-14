@@ -13,6 +13,8 @@
     <link rel="shortcut icon" href="/images/favicon.ico" />
 
     <title><%= yield(:title)+ " -" unless yield(:title).blank? %> BarcelonaOnRails</title>
+    
+    <%= stylesheet_link_tag 'style' %>
   </head>
   <body>
     <div id="header">
@@ -31,8 +33,8 @@
   	</div>
   	
   	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
-    <!--link media="all" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" rel="stylesheet" -->
+    <!--script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+    <link media="all" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" rel="stylesheet" -->
     <%= GMap.header %>
     <%= javascript_include_tag 'application', 'jquery.date.time.picker' %>
     <%= yield(:javascript) %>

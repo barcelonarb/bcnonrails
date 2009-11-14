@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_filter :require_user, :only => [:new, :create, :edit, :update]
+  before_filter :require_user, :except => [:index, :show]
   
   def index
     @events = Event.all
@@ -31,20 +31,18 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
 
-    respond_to do |format|
-      if @event.update_attributes(params[:event])
-        flash[:notice] = 'Event was successfully updated.'
-        redirect_to(@event)
-      else
-        render :action => "edit"
-      end
+    if @event.update_attributes(params[:event])
+      flash[:notice] = 'Event was successfully updated.'
+      redirect_to(@event)
+    else
+      render :action => "edit"
     end
   end
   
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
-
+  
     redirect_to(events_url)
   end
 end
