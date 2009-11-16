@@ -10,6 +10,7 @@ Intenciones
 ToDo
 ----
 * Internationalization
+* Usuarios: Editar perfil y seleccionar compañía
 
 Dependencias
 ------------

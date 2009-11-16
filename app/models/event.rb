@@ -1,22 +1,9 @@
 class Event < ActiveRecord::Base
+  include Geocodable
+  
   validates_presence_of :date, :title, :location
   
-  before_save     :geocode_location
+  named_scope :next, :conditions => ['date > ?', DateTime.now - 2.hours], :order => 'date asc'
   
-  def lat_lng_pair
-    [self.lat, self.lng]
-  end
-
-  def geocoded?
-    self.lat && self.lng
-  end
-  
-  protected
-    def geocode_location
-      g = GeoKit::Geocoders::MultiGeocoder.geocode(self.location)
-      if g.success
-        self.lat = g.lat
-        self.lng = g.lng
-      end
-    end
+  before_save :geocode_location
 end

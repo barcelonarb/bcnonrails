@@ -1,0 +1,21 @@
+<h2><%=h @company.name %></h2>
+
+<p>
+  <b>Website:</b>
+  <%=h @company.website %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @company.location %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= markdown @company.description %>
+</p>
+
+<%= location_map @company %>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>

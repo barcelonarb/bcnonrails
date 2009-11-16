@@ -1,0 +1,14 @@
+<% title "Listing companies" %>
+<h2><%= yield(:title) %></h2>
+
+<ul>
+  <% @companies.each do |company| %>
+    <li>
+      <%= link_to company.name, company %>
+      <%=h company.website %>
+      <%=h company.location %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'New company', new_company_path %>
