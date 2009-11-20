@@ -10,8 +10,8 @@ Intenciones
 ToDo
 ----
 * Internationalization
-* Jobs
 * Resúmenes de conferencias/charlas pasadas
+* Eventos: Hacer attending para ver que usuarios irán.
 
 Dependencias
 ------------

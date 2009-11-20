@@ -1,0 +1,28 @@
+<p>
+  <%= form.label :company_id %> <%= link_to 'New company', new_company_path %><br />
+  <%= select("job", "company_id", @companies.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'}) %><br />
+</p>
+<p>
+  <%= form.label :title %><br />
+  <%= form.text_field :title %>
+</p>
+<p>
+  <%= form.label :description %><br />
+  <%= form.text_area :description %>
+</p>
+<p>
+  <%= form.label :howto %><br />
+  <%= form.text_area :howto %>
+</p>
+<p>
+  <%= form.label :email %><br />
+  <%= form.text_field :email %>
+</p>
+<p>
+  <%= form.label :telefon %><br />
+  <%= form.text_field :telefon %>
+</p>
+<p>
+  <%= form.label :area %><br />
+  <%= form.text_field :area %>
+</p>

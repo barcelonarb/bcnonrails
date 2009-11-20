@@ -1,0 +1,15 @@
+<% title 'Editing job' %>
+<h2><%= yield(:title) %></h2>
+
+<% form_for(@job) do |f| %>
+  <%= f.error_messages %>
+
+  <%= render :partial => "form", :object => f %>
+  
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Destroy', @job, :confirm => 'Are you sure?', :method => :delete %> |
+<%= link_to 'Back', jobs_path %>

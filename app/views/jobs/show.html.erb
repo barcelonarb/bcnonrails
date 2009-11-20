@@ -1,0 +1,53 @@
+<p>
+  <b>User:</b>
+  <%=h @job.user.login %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= link_to @job.company.name, company_path(@job.company.id) %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= link_to @job.company.website, @job.company.website %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @job.company.location %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @job.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= markdown @job.description %>
+</p>
+
+<p>
+  <b>Howto:</b>
+  <%= markdown @job.howto %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @job.email %>
+</p>
+
+<p>
+  <b>Telefon:</b>
+  <%=h @job.telefon %>
+</p>
+
+<p>
+  <b>Area:</b>
+  <%=h @job.area %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>

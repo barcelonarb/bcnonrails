@@ -1,0 +1,19 @@
+<% title "Listing jobs" %>
+<h2><%= yield(:title) %></h2>
+
+<ul>
+  <% @jobs.each do |job| %>
+    <li>
+      <%= link_to job.title, job %>
+      <%= link_to job.company.name, company_path(job.company.id) %>
+      <%=h job.company.location %>
+      <%=h job.email %>
+      <%=h job.telefon %>
+      <%=h job.area %>
+    </li>
+  <% end %>
+</ul>
+
+<br />
+
+<%= link_to 'New job', new_job_path %>

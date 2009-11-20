@@ -32,6 +32,11 @@
   <b>Current login ip:</b>
   <%=h @user.current_login_ip %>
 </p>
+
+<p>
+  <b>User company:</b>
+  <%= link_to @user.company.name, company_path(@user.company.id) %>
+</p>
  
  
 <%= link_to 'Edit', edit_account_path %>
