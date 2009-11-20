@@ -21,7 +21,8 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = @current_user
+    @user       = @current_user
+    @companies  = Company.all
   end
 
   def update

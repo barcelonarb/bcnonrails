@@ -4,12 +4,10 @@
 	font-size: 14px;
 	padding: 0;
 	margin: 0;
-	background: #222;
 	width: 185px;
 }
  #datetimepicker_div {
 	display: none;
-	border: 1px solid #07F;
 	z-index: 10;
 }
  .datetimepicker_inline {

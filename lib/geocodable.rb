@@ -1,5 +1,4 @@
 module Geocodable
-  
   def lat_lng_pair
     [self.lat, self.lng]
   end

@@ -10,7 +10,8 @@ Intenciones
 ToDo
 ----
 * Internationalization
-* Usuarios: Editar perfil y seleccionar compañía
+* Jobs
+* Resúmenes de conferencias/charlas pasadas
 
 Dependencias
 ------------
