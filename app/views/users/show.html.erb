@@ -35,7 +35,11 @@
 
 <p>
   <b>User company:</b>
+  <% if !@user.company.nil? %>
   <%= link_to @user.company.name, company_path(@user.company.id) %>
+  <% else %>
+  <%= link_to 'New company', new_company_path %><br />
+  <% end %>
 </p>
  
  
