@@ -8,7 +8,7 @@ module ApplicationHelper
     content_for(:javascript) { code }
   end
   
-  def location_map(location, width = '900', height = '200')
+  def location_map(location, width = '960', height = '150')
     unless location.nil? || !location.geocoded?
       map = GMap.new 'map'
       map.control_init
