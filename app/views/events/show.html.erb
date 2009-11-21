@@ -1,4 +1,6 @@
-<h2><%=h @event.title %></h2>
+<% title @event.title + ' &ndash; ' + 'Event' %>
+<%= location_map @event %>
+<h2><%= yield(:title) %></h2>
 
 <p>
   <strong>Location:</strong>
@@ -14,8 +16,6 @@
   <strong>Date:</strong>
   <%=h @event.date %>
 </p>
-
-<%= location_map @event %>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

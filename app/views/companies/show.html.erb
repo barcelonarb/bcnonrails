@@ -1,8 +1,10 @@
-<h2><%=h @company.name %></h2>
+<% title @company.name + ' &ndash; ' + 'Company' %>
+<%= location_map @company %>
+<h2><%= yield(:title) %></h2>
 
 <p>
   <b>Website:</b>
-  <%=h @company.website %>
+  <%= link_to @company.website, @company.website %>
 </p>
 
 <p>
@@ -14,8 +16,6 @@
   <b>Description:</b>
   <%= markdown @company.description %>
 </p>
-
-<%= location_map @company %>
 
 <strong>Employees:</strong>
 <ul>
