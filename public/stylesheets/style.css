@@ -23,12 +23,14 @@ a:hover {
 #box {
 	width: 960px;
 	margin: 0 auto;
-	background: #F2F2F2;
+	background: #f2f2f2;
 }
 #header {
-	background: #CA3028;
+	background: #CA3028 url('/images/header.gif') 0 -15px;
+	border-top: 6px solid #CA3028;
 	color: #fff;
 	padding: 0 10px;
+	height: 96px;
 }
 #content {
 	margin: 10px;
