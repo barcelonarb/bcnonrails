@@ -83,6 +83,12 @@ strong {
 #content #error, #errorExplanation, .fieldWithErrors input {
 	background: #CA3028;
 }
+#footer {
+	float: left;
+	width: 100%;
+	padding: 10px;
+	background: #131313;
+}
 /** Por ordenadr **/
 #map {
 	float: left;
