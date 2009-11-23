@@ -22,3 +22,4 @@ Dependencias
 Plugins
 --------
 * ym4r_gm (GMaps) [svn://rubyforge.org/var/svn/ym4r/Plugins/GM/trunk/ym4r_gm](svn://rubyforge.org/var/svn/ym4r/Plugins/GM/trunk/ym4r_gm "GMaps")
+* Gravatar Rails Plugin [http://gravatarplugin.rubyforge.org/](http://gravatarplugin.rubyforge.org/ "gravatar")
