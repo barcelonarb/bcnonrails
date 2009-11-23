@@ -2,7 +2,7 @@
 <h2><%= yield(:title) %></h2>
  
 <% form_for @user, :url => account_path do |f| %>
-  <%= f.error_messages %>
+  <%= f.error_messages %><br class="clear" />
   <%= render :partial => "form", :object => f %>
   
   <%= f.label :company_id %> <%= link_to 'New company', new_company_path %><br />

@@ -1,0 +1,15 @@
+<% if @event %>
+  <h2>Next event</h2>
+  <div class="left grid9">
+    <h3><%= location_map(@event, 'home_map', '522', '180') %></h3>
+  </div>
+  <div class="right grid7">
+    <h3><%= link_to @event.title, event_path(@event) %></h3>
+    <p><strong>Location:</strong> <%= @event.location %></p>
+    <p><strong>Date:</strong> <%= @event.date.strftime("%Y/%m/%d %H:%Mh.") %></p>
+    <div class="markdown"><%= markdown @event.description %></div>
+  </div>
+  <div class="right grid2">
+      <h3>Hola</h3>
+  </div>
+<% end %>

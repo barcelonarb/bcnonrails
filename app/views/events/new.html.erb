@@ -2,7 +2,7 @@
 <h2><%= yield(:title)%></h2>
 
 <% form_for(@event) do |f| %>
-  <%= f.error_messages %>
+  <%= f.error_messages %><br class="clear" />
   <%= render :partial => "form", :object => f %>
   <p>
     <%= f.submit 'Create' %>

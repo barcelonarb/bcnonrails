@@ -19,12 +19,22 @@
   <body>
     <div id="box">
       <div id="header">
-        <h1>Barcelona On Rails</h1>
+        <h1>
+            <a href="<%= root_path  %>">
+                <span>Barcelona On Rails</span>
+            </a>
+        </h1>
     	</div>
 
       <div id="content">
-        <%= "<div id='error'><span>#{flash[:error]}</span></div>" unless flash[:error].blank? %>
-        <%= "<div id='notice'><span>#{flash[:notice]}</span></div>" unless flash[:notice].blank? %>
+        <ul class="menu">
+            <li><%= link_to "Events", events_path %></li>
+            <li><%= link_to "Companies", companies_path %></li>
+            <li><%= link_to "Sign up", new_account_path %></li>
+            <li><%= link_to "Login", new_user_session_path %></li>
+        </ul>
+        <%= "<div id='error'><span>#{flash[:error]}</span></div><br class='clear' />" unless flash[:error].blank? %>
+        <%= "<div id='notice'><span>#{flash[:notice]}</span></div><br class='clear' />" unless flash[:notice].blank? %>
         <%= yield %>
       </div>
 

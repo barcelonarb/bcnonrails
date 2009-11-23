@@ -1,10 +1,15 @@
+/** grid16*50+15*9+2*10**/
 @import url('reset.css');
 @import url('calendar.css');
 
+html {
+	border-top: 140px solid #FEFEFE;
+}
 body {
 	font: 0.84em/1.333 Helvetica, Arial, Verdana, sans-serif;
 	background-color: #D5D5D5;
 	color: #1C1C1C;
+	margin-top: -140px;
 }
 h1 {
 	font-size: 2em;
@@ -12,29 +17,109 @@ h1 {
 h2 {
 	font-size: 1.5em;
 }
+h3 {
+	font-size: 1.3em;
+}
 a {
 	color: #CA3028;
-	padding: 2px 5px 1px;
+	padding: 1px;
 }
 a:hover {
 	color: #fff;
 	background: #CA3028;
 }
+strong {
+	font-weight: bold;
+	background: #EEEBE3;
+	padding: 1px;
+}
+.clear {
+	clear: both;
+}
 #box {
-	width: 960px;
+	width: 955px;
 	margin: 0 auto;
 	background: #f2f2f2;
+	overflow: hidden;
 }
 #header {
-	background: #CA3028 url('/images/header.gif') 0 -15px;
-	border-top: 6px solid #CA3028;
+	background: #CA3028 url('/images/header.gif') 0 -10px;
+	_border-top: 6px solid #CA3028;
 	color: #fff;
-	padding: 0 10px;
-	height: 96px;
+	height: 115px;
+	float: left;
+}
+#header h1 a {
+	padding: 0;
+	display: block;
+	width: 955px;
+	height: 115px;
+}
+#header h1 a:hover {
+	background: none;
+}
+#header h1 a span {
+	display: none;
 }
 #content {
 	margin: 10px;
+	float: left;
 }
+#content ul.menu {
+	width: 100%;
+	float: left;
+}
+#content ul.menu li {
+	float: left;
+}
+#content #notice, #content #error, #errorExplanation {
+	padding: 5px 10px;
+	float: left;
+	color: #fff;
+}
+#content #notice {
+	background: #53995C;
+}
+#content #error, #errorExplanation, .fieldWithErrors input {
+	background: #CA3028;
+}
+/** Por ordenadr **/
 #map {
-	margin: -10px 0 0 -10px;
+	float: left;
+	margin: 0 0 0 -10px;
+}
+.markdown h1 {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.markdown h2 {
+	font-size: 1em;
+	font-weight: bold;
+}
+.left, .right {
+	float: left;
+}
+.right {
+	margin-left: 9px;
+}
+.grid2 {
+	width: 109px;
+}
+.grid3 {
+	width: 168px;
+}
+.grid4 {
+	width: 227px;
+}
+.grid5 {
+	width: 286px;
+}
+.grid6 {
+	width: 345px;
+}
+.grid7 {
+	width: 404px;
+}
+.grid9 {
+	width: 522px;
 }

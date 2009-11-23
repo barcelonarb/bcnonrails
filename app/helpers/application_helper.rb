@@ -8,9 +8,9 @@ module ApplicationHelper
     content_for(:javascript) { code }
   end
   
-  def location_map(location, width = '960', height = '150')
+  def location_map(location, id = 'map', width = '960', height = '150')
     unless location.nil? || !location.geocoded?
-      map = GMap.new 'map'
+      map = GMap.new id
       map.control_init
       map.center_zoom_on_points_init location.lat_lng_pair
       map.overlay_init GMarker.new(location.lat_lng_pair)
