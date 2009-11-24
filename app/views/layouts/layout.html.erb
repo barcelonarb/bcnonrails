@@ -30,8 +30,9 @@
         <ul class="menu">
             <li><%= link_to "Events", events_path %></li>
             <li><%= link_to "Companies", companies_path %></li>
+            <li><%= link_to "Jobs", jobs_path %></li>
             <% if current_user %>
-              <li>Hello <%= current_user.login %>!</li>
+              <li>Hello <%= link_to current_user.login, account_path %>!</li>
               <li><%= link_to "Logout", logout_path %></li>
             <% else %>
               <li><%= link_to "Sign up", new_account_path %></li>
@@ -44,7 +45,7 @@
       </div>
 
     	<div id="footer">
-        <a href="http://groups.google.com/group/barcelonaonrails" title="BarcelonaOnRails">BarcelonaOnRails</a>
+        <p class="left grid6">If you are a Rails programmer and you live in Barcelona this is your group</p><a class="right grid10" href="http://groups.google.com/group/barcelonaonrails" title="BarcelonaOnRails">BarcelonaOnRails</a>
     	</div>
     </div>
   	

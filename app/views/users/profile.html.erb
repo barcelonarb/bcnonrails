@@ -5,5 +5,6 @@
 
 <p>
   <b>User company:</b>
-  <%= link_to @user.company.name, company_path(@user.company.id) %>
+  <%= link_to @user.company.name, company_path(@user.company.id) unless @user.company.nil? %>
+  <%= link_to 'New company', new_company_path if @user.company.nil? %>
 </p>

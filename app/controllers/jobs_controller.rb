@@ -51,7 +51,8 @@ class JobsController < ApplicationController
     def should_be_current_user
       @job = Job.find(params[:id])
       if(current_user != @job.user)
-        redirect_to new_user_session_url
+        flash[:error] = "You must be the creator of this job to edit it."
+        redirect_to jobs_url
       end
     end
 end

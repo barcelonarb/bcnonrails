@@ -33,6 +33,9 @@ strong {
 	background: #EEEBE3;
 	padding: 1px;
 }
+small {
+	font-size: 0.7em;
+}
 .clear {
 	clear: both;
 }
@@ -83,11 +86,37 @@ strong {
 #content #error, #errorExplanation, .fieldWithErrors input {
 	background: #CA3028;
 }
+#content ul.users li {
+	float: left;
+	margin: 0 0 1.9px 1.9px;
+}
+#content ul.users li a {
+	padding: 0;
+	float: left;
+}
+#content ul.users li a:hover {
+	background: none;
+}
+#content ul.events li span {
+	color: #858585;
+}
+#content ul.jobs li span {
+	color: #858585;
+}
 #footer {
 	float: left;
 	width: 100%;
 	padding: 10px;
 	background: #131313;
+}
+#footer p {
+	font-size: 1.5em;
+	color: #F2F2F2;
+}
+#footer a {
+	font-size: 3.8em;
+	padding: 0;
+	margin-left: 50px;
 }
 /** Por ordenadr **/
 #map {
@@ -128,4 +157,7 @@ strong {
 }
 .grid9 {
 	width: 522px;
+}
+.grid16 {
+	width: 935px;
 }

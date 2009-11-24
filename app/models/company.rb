@@ -7,4 +7,6 @@ class Company < ActiveRecord::Base
   has_many :jobs
   
   before_save :geocode_location
+  
+  named_scope :random, lambda { |random| {:order => "RAND()", :limit => random }}
 end
