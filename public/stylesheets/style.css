@@ -108,12 +108,12 @@ small {
 	width: 100%;
 	padding: 10px;
 	background: #131313;
-}
-#footer p {
-	font-size: 1.5em;
 	color: #F2F2F2;
 }
-#footer a {
+#footer p.promo {
+	font-size: 1.5em;
+}
+#footer a.promo {
 	font-size: 3.8em;
 	padding: 0;
 	margin-left: 50px;

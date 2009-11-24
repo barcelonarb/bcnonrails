@@ -45,7 +45,31 @@
       </div>
 
     	<div id="footer">
-        <p class="left grid6">If you are a Rails programmer and you live in Barcelona this is your group</p><a class="right grid10" href="http://groups.google.com/group/barcelonaonrails" title="BarcelonaOnRails">BarcelonaOnRails</a>
+        <p class="left grid6 promo">If you are a Rails programmer and you live in Barcelona this is your group</p><a class="right grid10 promo" href="http://groups.google.com/group/barcelonaonrails" title="BarcelonaOnRails">BarcelonaOnRails</a>
+        <br class="clear" />
+        <ul class="left grid2">
+            <li>User</li>
+            <li><%= link_to "Login", new_user_session_path %></li>
+            <li><%= link_to "Sign up", new_account_path %></li>
+            <li><%= link_to "View account", account_path %></li>
+            <li><%= link_to "Edit account", edit_account_path %></li>
+            <li><%= link_to "Password reset", new_password_reset_path %></li>
+        </ul>
+        <ul class="right grid2">
+            <li>Events</li>
+            <li><%= link_to "Index", events_path %></li>
+            <li><%= link_to "Add event", new_event_path %></li>
+        </ul>
+        <ul class="right grid2">
+            <li>Companies</li>
+            <li><%= link_to "Index", companies_path %></li>
+            <li><%= link_to "Add company", new_company_path %></li>
+        </ul>
+        <ul class="right grid2">
+            <li>Jobs</li>
+            <li><%= link_to "Index", jobs_path %></li>
+            <li><%= link_to "Add job", new_job_path %></li>
+        </ul>
     	</div>
     </div>
   	

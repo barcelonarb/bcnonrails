@@ -37,7 +37,7 @@
   </ul>
 <% end %>
 <% if @companies %>
-  <ul class="left grid4 companies">
+  <ul class="right grid4 companies">
     <h2>Companies</h2>
     <% @companies.each do |company| %>
       <li><%= link_to company.name, company_path(company), :title => company.name %></li>
