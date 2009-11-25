@@ -20,6 +20,9 @@ h2 {
 h3 {
 	font-size: 1.3em;
 }
+h4 {
+	font-size: 1.2em;
+}
 a {
 	color: #CA3028;
 	padding: 1px;
@@ -103,6 +106,40 @@ small {
 #content ul.jobs li span {
 	color: #858585;
 }
+#content .jobs h2 small, #content .events h2 small {
+	float: right;
+	margin-right: 20px;
+}
+#content .jobs dl {
+	float: left;
+	background: #E9E9E9;
+	border: 1px solid #D8D8D8;
+	padding: 10px;
+	width: 264px;
+}
+#content .jobs dt {
+	float:left;
+	padding:7.5px 0;
+	clear: both;
+}
+#content .jobs dd {
+	border-bottom:1px solid #D4D4D4;
+	color:#A6A6A6;
+	display:block;
+	padding:7px 0;
+	text-align:right;
+}
+#content .jobs dd.company {
+	text-align: left;
+	border: 0;
+	padding-bottom: 0px;
+	font-size: 1.4em;
+	color: #292929;
+}
+#content .jobs dd.date {
+	padding: 0 0 30px 0;
+	text-align: left;
+}
 #footer {
 	float: left;
 	width: 100%;
@@ -131,6 +168,12 @@ small {
 	font-size: 1em;
 	font-weight: bold;
 }
+.markdown ul li {
+	list-style: square inside;
+}
+.markdown ol li {
+	list-style: decimal inside;
+}
 .left, .right {
 	float: left;
 }
@@ -157,6 +200,9 @@ small {
 }
 .grid9 {
 	width: 522px;
+}
+.grid11 {
+	width: 640px;
 }
 .grid16 {
 	width: 935px;

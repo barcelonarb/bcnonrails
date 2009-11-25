@@ -1,53 +1,46 @@
-<p>
-  <b>User:</b>
-  <%=h @job.user.login %>
-</p>
+<%= title @job.title + " - Jobs" %>
+<div class="left jobs">
+  <h3>Jobs</h3>
+  <h2><%= @job.title %><%= "<small>" + link_to('Edit', edit_job_path(@job)) + "</small>" unless current_user != @job.user %></h2>
 
-<p>
-  <b>Company:</b>
-  <%= link_to @job.company.name, company_path(@job.company.id) %>
-</p>
-
-<p>
-  <b>Website:</b>
-  <%= link_to @job.company.website, @job.company.website %>
-</p>
-
-<p>
-  <b>Location:</b>
-  <%=h @job.company.location %>
-</p>
-
-<p>
-  <b>Title:</b>
-  <%=h @job.title %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= markdown @job.description %>
-</p>
-
-<p>
-  <b>Howto:</b>
-  <%= markdown @job.howto %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%=h @job.email %>
-</p>
-
-<p>
-  <b>Telefon:</b>
-  <%=h @job.telefon %>
-</p>
-
-<p>
-  <b>Area:</b>
-  <%=h @job.area %>
-</p>
-
-
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+  <div class="left grid11 jobs">
+    <div class="markdown">
+      <%= markdown @job.description %>
+    </div>
+    <h4>What should I do?</h4>
+    <div class="markdown">
+      <%= markdown @job.howto %>
+      <%= "Contact #{link_to@job.company.name, company_path(@job.company)} by email, phone or go to their offices." if @job.howto.blank? %>
+    </div>
+  </div>
+  <div class="right grid5 jobs">
+    <dl>
+      <dd class="company"><%= @job.company.name %></dd>
+      <dd class="date"><%= @job.created_at.strftime("%Y/%m/%d") %></dd>
+      <dt>Website</dt>
+      <dd>
+        <%= link_to(@job.company.website, @job.company.website) %>
+        <%= "-" if @job.company.website.blank? %>
+      </dd>
+      <dt>Email</dt>
+      <dd><%=h @job.email %></dd>
+      <dt>Location</dt>
+      <dd>
+        <%=h (@job.company.location[0..28] + "…") %>
+        <%= "-" if @job.company.location.blank? %>
+      </dd>
+      <dt>Phone</dt>
+      <dd>
+        <%=h @job.telefon %>
+        <%= "-" if @job.telefon.blank? %>
+      </dd>
+      <dt>User</dt>
+      <dd><%=h @job.user.login %></dd>
+      <dt>Area</dt>
+      <dd>
+        <%=h @job.area %>
+        <%= "-" if @job.area.blank? %>
+      </dd>
+    </dl>
+  </div>
+</div>

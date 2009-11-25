@@ -1,21 +1,21 @@
 <% title @event.title + ' &ndash; ' + 'Event' %>
-<%= location_map @event %>
-<h2><%= yield(:title) %></h2>
+<div class="events">
+  <h3>Events</h3>
+  <h2><%= @event.title %><%= "<small>" + link_to('Edit', edit_event_path(@event)) + "</small>" %></h2>
+  <%= location_map @event %>
 
-<p>
-  <strong>Location:</strong>
-  <%=h @event.location %>
-</p>
+  <p>
+    <strong>Where:</strong>
+    <%=h @event.location %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= markdown @event.description %>
-</p>
+  <div class="markdown">
+    <strong>What:</strong>
+    <%= markdown @event.description %>
+  </div>
 
-<p>
-  <strong>Date:</strong>
-  <%=h @event.date %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+  <p>
+    <strong>When:</strong>
+    <%=h @event.date.strftime("%Y/%m/%d - %H:%mh.") %>
+  </p>
+</div>
