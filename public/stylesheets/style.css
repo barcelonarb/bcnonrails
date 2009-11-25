@@ -1,4 +1,4 @@
-/** grid16*50+15*9+2*10**/
+/** grid16*40+15*20+2*10 **/
 @import url('reset.css');
 @import url('calendar.css');
 
@@ -43,14 +43,13 @@ small {
 	clear: both;
 }
 #box {
-	width: 955px;
+	width: 960px;
 	margin: 0 auto;
 	background: #f2f2f2;
 	overflow: hidden;
 }
 #header {
 	background: #CA3028 url('/images/header.gif') 0 -10px;
-	_border-top: 6px solid #CA3028;
 	color: #fff;
 	height: 115px;
 	float: left;
@@ -58,7 +57,7 @@ small {
 #header h1 a {
 	padding: 0;
 	display: block;
-	width: 955px;
+	width: 960px;
 	height: 115px;
 }
 #header h1 a:hover {
@@ -115,7 +114,7 @@ small {
 	background: #E9E9E9;
 	border: 1px solid #D8D8D8;
 	padding: 10px;
-	width: 264px;
+	width: 258px;
 }
 #content .jobs dt {
 	float:left;
@@ -178,32 +177,32 @@ small {
 	float: left;
 }
 .right {
-	margin-left: 9px;
+	margin-left: 20px;
 }
 .grid2 {
-	width: 109px;
+	width: 100px;
 }
 .grid3 {
-	width: 168px;
+	width: 160px;
 }
 .grid4 {
-	width: 227px;
+	width: 220px;
 }
 .grid5 {
-	width: 286px;
+	width: 280px;
 }
 .grid6 {
-	width: 345px;
+	width: 340px;
 }
 .grid7 {
-	width: 404px;
+	width: 400px;
 }
 .grid9 {
-	width: 522px;
+	width: 520px;
 }
 .grid11 {
 	width: 640px;
 }
 .grid16 {
-	width: 935px;
+	width: 940px;
 }
