@@ -1,5 +1,5 @@
 <%= title @job.title + " - Jobs" %>
-<div class="left jobs">
+<div class="left grid16 jobs">
   <h3>Jobs</h3>
   <h2><%= @job.title %><%= "<small>" + link_to('Edit', edit_job_path(@job)) + "</small>" unless current_user != @job.user %></h2>
 

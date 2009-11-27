@@ -20,4 +20,12 @@ module ApplicationHelper
       map.div(:width => width, :height => height) 
     end
   end
+  
+  def selected?(controller, action = nil)
+    if action.nil?
+      "selected" if params[:controller] == controller
+    else
+      "selected" if params[:controller] == controller && params[:action] == action
+    end
+  end
 end

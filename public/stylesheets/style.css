@@ -71,11 +71,59 @@ small {
 	float: left;
 }
 #content ul.menu {
-	width: 100%;
 	float: left;
+	margin-bottom: 10px;
 }
 #content ul.menu li {
 	float: left;
+	margin-right: 10px;
+}
+#content ul.menu li a {
+	display: block;
+	background: url('/images/menu_button.gif');
+	padding: 6px 0px 6px 10px;
+	color: #f2f2f2;
+}
+#content ul.menu li a span {
+	display: block;
+	float: right;
+	padding: 6px 0;
+	margin-top: -6px;
+	width: 10px;
+	background: #f2f2f2 url('/images/menu_button.gif') -226px 0;
+}
+#content ul.menu li a:hover, #content ul.menu li a.selected {
+	background-position: 0 -30px;
+}
+#content ul.menu li a:hover span, #content ul.menu li a.selected span {
+	background-position: -226px -30px;
+}
+#content ul.menu .login {
+	float: right;
+	border-left: 1px solid #DDD;
+}
+#content ul.menu .login li {
+	height: 28px;
+}
+#content ul.menu .login li span {
+	padding: 6px 0;
+	float: left;
+}
+#content ul.menu .login .border {
+	margin:0 10px 0 0;
+	padding: 0;
+	border-left: 1px solid #fff;
+}
+#content ul.menu .login li a {
+	display: inline;
+	float: left;
+	padding: 6px;
+	background: none;
+	color: #CA3028;
+}
+#content ul.menu .login li a:hover, #content ul.menu .login li a.selected {
+	background: #CA3028;
+	color: #f2f2f2;
 }
 #content #notice, #content #error, #errorExplanation {
 	padding: 5px 10px;
@@ -107,7 +155,7 @@ small {
 }
 #content .jobs h2 small, #content .events h2 small {
 	float: right;
-	margin-right: 20px;
+	margin-right: 15px;
 }
 #content .jobs dl {
 	float: left;
@@ -141,7 +189,6 @@ small {
 }
 #footer {
 	float: left;
-	width: 100%;
 	padding: 10px;
 	background: #131313;
 	color: #F2F2F2;

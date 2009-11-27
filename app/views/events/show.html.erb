@@ -1,5 +1,5 @@
 <% title @event.title + ' &ndash; ' + 'Event' %>
-<div class="events">
+<div class="left grid16 events">
   <h3>Events</h3>
   <h2><%= @event.title %><%= "<small>" + link_to('Edit', edit_event_path(@event)) + "</small>" %></h2>
   <%= location_map @event %>
