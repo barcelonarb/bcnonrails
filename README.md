@@ -23,3 +23,12 @@ Plugins
 --------
 * ym4r_gm (GMaps) [svn://rubyforge.org/var/svn/ym4r/Plugins/GM/trunk/ym4r_gm](svn://rubyforge.org/var/svn/ym4r/Plugins/GM/trunk/ym4r_gm "GMaps")
 * Gravatar Rails Plugin [http://gravatarplugin.rubyforge.org/](http://gravatarplugin.rubyforge.org/ "gravatar")
+
+Credits
+-------
+Jordi Villar [http://jordivillar.com](http://jordivillar.com "Jordi Villar")
+
+License
+-------
+Copyright (c) 2009 Released under the MIT license (see MIT-LICENSE) Jordi Villar [http://jordivillar.com](http://jordivillar.com "Jordi Villar")
+

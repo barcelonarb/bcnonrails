@@ -191,15 +191,33 @@ small {
 	float: left;
 	padding: 10px;
 	background: #131313;
-	color: #F2F2F2;
+	color: #999;
 }
 #footer p.promo {
 	font-size: 1.5em;
+	color:#484848;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #0A0A0A;
+	text-align: justify;
 }
-#footer a.promo {
-	font-size: 3.8em;
+#footer p span {
+	color:#7E7E7E;
+}
+#footer p a {
 	padding: 0;
-	margin-left: 50px;
+}
+#footer ul.first {
+	border-top: 1px solid #1B1B1B;
+	padding-top: 20px;
+}
+#footer ul.last {
+	margin-bottom: 10px;
+}
+#footer ul li {
+	float: left;
+}
+#footer ul li a {
+	margin: 0 7px;
 }
 /** Por ordenadr **/
 #map {
