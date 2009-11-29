@@ -24,5 +24,12 @@
   <% end  %>
 </ul>
 
+<strong>Jobs:</strong>
+<ul>
+  <% @company.jobs.each do |j| %>
+    <li><%= link_to j.title, job_path(j.id) %></li>
+  <% end  %>
+</ul>
+
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>
