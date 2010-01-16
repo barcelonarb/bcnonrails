@@ -1,14 +1,28 @@
-<% title "Listing companies" %>
-<h2><%= yield(:title) %></h2>
-
-<ul>
-  <% @companies.each do |company| %>
-    <li>
-      <%= link_to company.name, company %>
-      <%=h company.website %>
-      <%=h company.location %>
-    </li>
-  <% end %>
-</ul>
-
-<%= link_to 'New company', new_company_path %>
+<% title "Companies" %>
+<div class="grid16 left list">
+  <h2><%= yield(:title) %><%= "<small>" + link_to('New company', new_company_path)  + "</small>" if current_user %></h2>
+  <table summary="Companies list">
+    <caption>Companies list</caption> 
+    <colgroup>
+      <col class="company_name" />    
+      <col class="company_website" /> 
+      <col class="company_location" /> 
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="company_name" scope="col"><strong>Name</strong></th> 
+        <th class="company_website" scope="col"><strong>Website</strong></th>
+        <th class="company_location" scope="col"><strong>Location</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @companies.each do |company| %>  
+        <tr>
+          <td class="company_name"><%= link_to company.name, company %></td>    
+          <td class="company_website"><%=h company.website %></td>
+          <td class="company_location"><%=h company.location %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

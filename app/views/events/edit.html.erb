@@ -10,5 +10,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Destroy', @event, :confirm => 'Are you sure?', :method => :delete %> |
-<%= link_to 'Back', events_path %>
+<%= link_to 'Destroy', @event, :confirm => 'Are you sure?', :method => :delete if current_user %>

@@ -2,7 +2,7 @@ class CompaniesController < ApplicationController
   before_filter :require_user, :except => [:index, :show]
   
   def index
-    @companies = Company.all
+    @companies = Company.all(:order => "name")
   end
 
   def show

@@ -1,35 +1,35 @@
 <% title @company.name + ' &ndash; ' + 'Company' %>
-<%= location_map @company %>
-<h2><%= yield(:title) %></h2>
+<div class="grid16 left companies">  
+  <h3>Companies</h3>
+  <h2><%= yield(:title) %><%= "<small>" + link_to('Edit', edit_event_path(@company)) + "</small>" if current_user %></h2>
+  <%= location_map @company %>   
 
-<p>
-  <b>Website:</b>
-  <%= link_to @company.website, @company.website %>
-</p>
+  <p>
+    <b>Website:</b>
+    <%= link_to @company.website, @company.website %>
+  </p>
 
-<p>
-  <b>Location:</b>
-  <%=h @company.location %>
-</p>
+  <p>
+    <b>Location:</b>
+    <%=h @company.location %>
+  </p>
 
-<p>
-  <b>Description:</b>
-  <%= markdown @company.description %>
-</p>
+  <p>
+    <b>Description:</b>
+    <%= markdown @company.description %>
+  </p>
 
-<strong>Employees:</strong>
-<ul>
-  <% @company.employees.each do |e| %>
-    <li><%= link_to e.login, profile_path(e.id) %></li>
-  <% end  %>
-</ul>
+  <strong>Employees:</strong>
+  <ul>
+    <% @company.employees.each do |e| %>
+      <li><%= link_to e.login, profile_path(e.id) %></li>
+    <% end  %>
+  </ul>
 
-<strong>Jobs:</strong>
-<ul>
-  <% @company.jobs.each do |j| %>
-    <li><%= link_to j.title, job_path(j.id) %></li>
-  <% end  %>
-</ul>
-
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+  <strong>Jobs:</strong>
+  <ul>
+    <% @company.jobs.each do |j| %>
+      <li><%= link_to j.title, job_path(j.id) %></li>
+    <% end  %>
+  </ul>
+</div>

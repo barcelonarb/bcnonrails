@@ -11,5 +11,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Destroy', @company, :confirm => 'Are you sure?', :method => :delete %> |
-<%= link_to 'Back', companies_path %>
+<%= link_to 'Destroy', @company, :confirm => 'Are you sure?', :method => :delete if current_user %>

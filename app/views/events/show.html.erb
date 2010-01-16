@@ -1,7 +1,7 @@
 <% title @event.title + ' &ndash; ' + 'Event' %>
 <div class="left grid16 events">
   <h3>Events</h3>
-  <h2><%= @event.title %><%= "<small>" + link_to('Edit', edit_event_path(@event)) + "</small>" %></h2>
+  <h2><%= @event.title %><%= "<small>" + link_to('Edit', edit_event_path(@event)) + "</small>" if current_user %></h2>
   <%= location_map @event %>
 
   <p>

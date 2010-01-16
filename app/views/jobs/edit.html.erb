@@ -12,5 +12,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Destroy', @job, :confirm => 'Are you sure?', :method => :delete %> |
-<%= link_to 'Back', jobs_path %>
+<%= link_to 'Destroy', @job, :confirm => 'Are you sure?', :method => :delete if current_user %>

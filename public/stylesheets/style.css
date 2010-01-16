@@ -152,8 +152,15 @@ small {
 }
 #content ul.jobs li span {
 	color: #858585;
+}  
+#content .list table {
+	width: 100%;
+	border: 1px solid #D8D8D8;
+}                  
+#content .list table caption {
+	display: none;
 }
-#content .jobs h2 small, #content .events h2 small {
+#content .jobs h2 small, #content .events h2 small, #content .companies h2 small, #content .list h2 small {
 	float: right;
 	margin-right: 15px;
 }
