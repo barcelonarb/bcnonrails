@@ -1,35 +1,39 @@
 <% title @company.name + ' &ndash; ' + 'Company' %>
 <div class="grid16 left companies">  
-  <h3>Companies</h3>
-  <h2><%= yield(:title) %><%= "<small>" + link_to('Edit', edit_event_path(@company)) + "</small>" if current_user %></h2>
+  <h2>Companies</h2>
+  <h3><%= yield(:title) %><%= "<small>" + link_to('Edit', edit_event_path(@company)) + "</small>" if current_user %></h3>
   <%= location_map @company %>   
+  <div class="info grid7 left">
+    <p>
+      <strong>Website:</strong>
+      <%= link_to @company.website, @company.website %>
+    </p>
 
-  <p>
-    <b>Website:</b>
-    <%= link_to @company.website, @company.website %>
-  </p>
-
-  <p>
-    <b>Location:</b>
-    <%=h @company.location %>
-  </p>
-
-  <p>
-    <b>Description:</b>
-    <%= markdown @company.description %>
-  </p>
-
-  <strong>Employees:</strong>
-  <ul>
-    <% @company.employees.each do |e| %>
-      <li><%= link_to e.login, profile_path(e.id) %></li>
-    <% end  %>
-  </ul>
-
-  <strong>Jobs:</strong>
-  <ul>
-    <% @company.jobs.each do |j| %>
-      <li><%= link_to j.title, job_path(j.id) %></li>
-    <% end  %>
-  </ul>
+    <p>
+      <strong>Location:</strong>
+      <%=h @company.location %>
+    </p>
+    <% unless @company.employees.blank? %>
+      <strong>Employees:</strong>
+      <ul>
+        <% @company.employees.each do |e| %>
+          <li><%= link_to e.login, profile_path(e.id) %></li>
+        <% end  %>
+      </ul>   
+    <% end %>
+    <% unless @company.jobs.blank? %>
+      <strong>Jobs:</strong>
+      <ul>
+        <% @company.jobs.each do |j| %>
+          <li><%= link_to j.title, job_path(j.id) %></li>
+        <% end  %>
+      </ul> 
+    <% end %>
+  </div>
+  <div class="info right grid9">
+    <p>
+      <strong>Description:</strong>
+      <%= markdown @company.description %>
+    </p>
+  </div>
 </div>

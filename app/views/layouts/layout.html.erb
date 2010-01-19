@@ -31,7 +31,7 @@
             <li><%= link_to "Events<span>&nbsp;</span>", events_path, :class => selected?('events') %></li>
             <li><%= link_to "Companies<span>&nbsp;</span>", companies_path, :class => selected?('companies') %></li>
             <li><%= link_to "Jobs<span>&nbsp;</span>", jobs_path, :class => selected?('jobs') %></li>
-            <div class="login grid4">
+            <div class="login_bar grid4">
               <li class="border">&nbsp;</li>
               <% if current_user %>
                 <li><span>Hello</span> <%= link_to current_user.login, account_path, :class => selected?('users', 'show') %><span>!</span></li>

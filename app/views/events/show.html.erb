@@ -1,21 +1,24 @@
 <% title @event.title + ' &ndash; ' + 'Event' %>
 <div class="left grid16 events">
-  <h3>Events</h3>
-  <h2><%= @event.title %><%= "<small>" + link_to('Edit', edit_event_path(@event)) + "</small>" if current_user %></h2>
-  <%= location_map @event %>
-
-  <p>
-    <strong>Where:</strong>
-    <%=h @event.location %>
-  </p>
-
-  <div class="markdown">
-    <strong>What:</strong>
-    <%= markdown @event.description %>
+  <h2>Events</h2>           
+  <div class="left grid16 place">
+    <div class="left grid7">
+      <h3><%= @event.title %><%= "<small>" + link_to('Edit', edit_event_path(@event)) + "</small>" if current_user %></h3>
+      <div class="markdown">
+        <strong>Description:</strong>
+        <%= markdown @event.description %>
+      </div>
+    </div>
+    <div class="right grid8">
+      <p>
+        <strong>Place:</strong>
+        <%=h @event.location %>
+      </p>
+      <p>
+        <strong>Date:</strong>
+        <%=h @event.date.strftime("%Y/%m/%d - %H:%mh.") %>
+      </p>   
+      <%= location_map(@event, '460', '300') %>
+    </div>
   </div>
-
-  <p>
-    <strong>When:</strong>
-    <%=h @event.date.strftime("%Y/%m/%d - %H:%mh.") %>
-  </p>
 </div>

@@ -1,46 +1,48 @@
-<% if @event %>
-  <h2>Next event</h2>
-  <div class="left grid9">
-    <h3><%= location_map(@event, 'home_map', '522', '180') %></h3>
-  </div>
-  <div class="right grid7">
-    <h3><%= link_to @event.title, event_path(@event) %></h3>
-    <p><strong>Location:</strong> <%= @event.location %></p>
-    <p><strong>Date:</strong> <%= @event.date.strftime("%Y/%m/%d %H:%Mh.") %></p>
-    <div class="markdown"><%= markdown @event.description %></div>
-  </div>
-<% end %>
-<br class="clear" />
-<% if @users %>
-  <h2>Users</h2>
-  <ul class="left grid16 users">
-    <% @users.each do |user| %>
-      <li><%= link_to gravatar_for(user, :alt => user.login), profile_path(:id => user.id), :title => user.login %></li>
-    <% end %>
-  </ul>
-<% end %>
-<br class="clear" />
-<% if @events %>
-  <ul class="left grid6 events">
-    <h2>Events</h2>
-    <% @events.each do |event| %>
-      <li><%= link_to(event.title, event_path(event), :title => event.title) + " <small>at</small> <span>#{event.location[0..30]}...</span>" %></li>
-    <% end %>
-  </ul>
-<% end %>
-<% if @jobs %>
-  <ul class="right grid6 jobs">
-    <h2>Jobs</h2>
-    <% @jobs.each do |job| %>
-      <li><%= link_to(job.title, job_path(job), :title => job.title) + " <small>at</small> <span>#{job.company.name}</span>"  %></li>
-    <% end %>
-  </ul>
-<% end %>
-<% if @companies %>
-  <ul class="right grid4 companies">
-    <h2>Companies</h2>
-    <% @companies.each do |company| %>
-      <li><%= link_to company.name, company_path(company), :title => company.name %></li>
-    <% end %>
-  </ul>
-<% end %>
+<div class="home">
+  <% if @event %>
+    <h2>Next event</h2>
+    <div class="left grid9">
+      <h3><%= location_map(@event, '522', '180', 'home_map') %></h3>
+    </div>
+    <div class="right grid7 event_description">
+      <h3><%= link_to @event.title, event_path(@event) %></h3>
+      <p><strong>Location:</strong> <%= @event.location %></p>
+      <p><strong>Date:</strong> <%= @event.date.strftime("%Y/%m/%d %H:%Mh.") %></p>
+      <div class="markdown"><%= markdown @event.description %></div>
+    </div>
+  <% end %>
+  <br class="clear" />
+  <% if @users %>
+    <h2>Users</h2>
+    <ul class="left grid16 users">
+      <% @users.each do |user| %>
+        <li><%= link_to gravatar_for(user, :alt => user.login), profile_path(:id => user.id), :title => user.login %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <br class="clear" />
+  <% if @events %>
+    <ul class="left grid6 events">
+      <h2>Events</h2>
+      <% @events.each do |event| %>
+        <li><%= link_to(event.title, event_path(event), :title => event.title) + " <small>at</small> <span>#{event.location[0..30]}...</span>" %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <% if @jobs %>
+    <ul class="right grid6 jobs">
+      <h2>Jobs</h2>
+      <% @jobs.each do |job| %>
+        <li><%= link_to(job.title, job_path(job), :title => job.title) + " <small>at</small> <span>#{job.company.name}</span>"  %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <% if @companies %>
+    <ul class="right grid4 companies">
+      <h2>Companies</h2>
+      <% @companies.each do |company| %>
+        <li><%= link_to company.name, company_path(company), :title => company.name %></li>
+      <% end %>
+    </ul>
+  <% end %>  
+</div>

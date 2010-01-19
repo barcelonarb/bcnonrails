@@ -8,7 +8,7 @@ module ApplicationHelper
     content_for(:javascript) { code }
   end
   
-  def location_map(location, id = 'map', width = '960', height = '150')
+  def location_map(location, width = '960', height = '150', id = 'map')
     unless location.nil? || !location.geocoded?
       map = GMap.new id
       map.control_init
@@ -16,7 +16,6 @@ module ApplicationHelper
       map.overlay_init GMarker.new(location.lat_lng_pair)
       
       content_for(:javascript) { map.to_html }
-      
       map.div(:width => width, :height => height) 
     end
   end

@@ -67,12 +67,12 @@ small {
 	display: none;
 }
 #content {
-	margin: 10px;
+	margin: 10px 10px 20px;
 	float: left;
 }
 #content ul.menu {
 	float: left;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 #content ul.menu li {
 	float: left;
@@ -98,30 +98,30 @@ small {
 #content ul.menu li a:hover span, #content ul.menu li a.selected span {
 	background-position: -226px -30px;
 }
-#content ul.menu .login {
+#content ul.menu .login_bar {
 	float: right;
 	border-left: 1px solid #DDD;
 }
-#content ul.menu .login li {
+#content ul.menu .login_bar li {
 	height: 28px;
 }
-#content ul.menu .login li span {
+#content ul.menu .login_bar li span {
 	padding: 6px 0;
 	float: left;
 }
-#content ul.menu .login .border {
+#content ul.menu .login_bar .border {
 	margin:0 10px 0 0;
 	padding: 0;
 	border-left: 1px solid #fff;
 }
-#content ul.menu .login li a {
+#content ul.menu .login_bar li a {
 	display: inline;
 	float: left;
 	padding: 6px;
 	background: none;
 	color: #CA3028;
 }
-#content ul.menu .login li a:hover, #content ul.menu .login li a.selected {
+#content ul.menu .login_bar li a:hover, #content ul.menu .login li a.selected {
 	background: #CA3028;
 	color: #f2f2f2;
 }
@@ -129,12 +129,50 @@ small {
 	padding: 5px 10px;
 	float: left;
 	color: #fff;
+	margin: 10px 0 20px;
 }
 #content #notice {
 	background: #53995C;
 }
 #content #error, #errorExplanation, .fieldWithErrors input {
 	background: #CA3028;
+}       
+#content .login {
+	float: left;
+	margin: 30px 0px 20px 260px;
+	background: #F0EDE5;
+	padding: 10px; 
+	border: 1px solid #E6E2DC; 
+} 
+#content .login form {
+	float: left;
+}                          
+#content .login label { 
+	float: left;
+	width: 120px;
+	margin: 5px 0;
+}
+#content .login input { 
+	float: left;
+	width: 250px;
+	margin: 5px 0; 
+} 
+#content .login a {  
+	float: right;
+	margin: 5px 20px;
+}
+#content .login input[type=checkbox] {
+	width: 20px;
+}
+#content .login input[type=submit] {
+	margin: 10px 0 5px 75px;
+} 
+#content .home h2 {   
+	margin: 25px 0 10px;
+}
+#content .home .event_description {
+	height: 180px;    
+	overflow: auto;
 }
 #content ul.users li {
 	float: left;
@@ -153,16 +191,71 @@ small {
 #content ul.jobs li span {
 	color: #858585;
 }  
+#content .list h2 {
+	margin-bottom: 10px;
+}
 #content .list table {
 	width: 100%;
-	border: 1px solid #D8D8D8;
-}                  
+	border-bottom: 1px solid #D8D8D8;   
+	float: left;
+}                 
+#content .list table tr {     
+	overflow: hidden;	
+	border-top: 1px solid #D8D8D8; 
+}
+#content .list table th { 
+	font-size: 1.1em; 
+	padding: 10px 0;
+	background: #EFECE4; 
+} 
+#content .list table td {
+	padding: 5px 0;
+}                 
 #content .list table caption {
 	display: none;
+}      
+#content .events h2, #content .companies h2, #content .jobs h2 {
+	margin-bottom: 10px; 
+}    
+#content .events .place {
+	padding: 20px; 
+	background: #EEEBE3;
+	width: 900px;    
+	border: 1px solid #E6E2DC;
+}   
+#content .events .place h3 {
+	font-weight: bold;  
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}     
+#content .events .place strong {
+	background: #E7E3DD; 
 }
-#content .jobs h2 small, #content .events h2 small, #content .companies h2 small, #content .list h2 small {
+#content .events .place #map {
+	margin: 10px 0 0 0;
+}
+#content .companies h3 {
+	font-weight: bold;
+	font-size: 1.7em; 
+	margin-bottom: 5px;
+}
+#content .companies .info {
+	margin-top: 15px;
+} 
+#content .companies .info ul {
+	margin: 5px;
+}
+#content .jobs h3 small, #content .events h3 small, #content .companies h3 small, #content .list h2 small {
 	float: right;
 	margin-right: 15px;
+} 
+#content .jobs h3 {
+	font-weight: bold;
+	font-size: 1.7em; 
+	margin-bottom: 5px;
+}  
+#content .jobs .markdown {
+	margin: 5px 0 20px 5px;
 }
 #content .jobs dl {
 	float: left;
@@ -269,11 +362,17 @@ small {
 .grid7 {
 	width: 400px;
 }
+.grid8 {
+	width: 460px;
+}
 .grid9 {
 	width: 520px;
 }
 .grid11 {
 	width: 640px;
+}
+.grid15 {
+	width: 880px;
 }
 .grid16 {
 	width: 940px;
