@@ -1,3 +1,5 @@
+Capfile
 config/database.yml
+config/deploy.rb
 db/development.sqlite3
 log/*.log

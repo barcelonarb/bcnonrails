@@ -1,10 +1,44 @@
-<p>
-  <b>Login:</b>
-  <%=h @user.login %>
-</p>
-
-<p>
-  <b>User company:</b>
-  <%= link_to @user.company.name, company_path(@user.company.id) unless @user.company.nil? %>
-  <%= link_to 'New company', new_company_path if @user.company.nil? %>
-</p>
+<% title @user.login %>
+<h2 style="margin-bottom:20px"><%= yield(:title) %></h2>
+<div class="profile left grid9">                                                                                            
+  <h3>Profile<%= "<small>" + link_to('Edit', edit_account_path) + "</small>" unless current_user != @user %></h3>
+  <dl>
+    <dt>Gravatar</dt>
+    <dd><%= gravatar_for @user, :alt => @user.login %></dd>
+    <dt>Login</dt>
+    <dd><%=h @user.login %></dd>
+    <dt>Email</dt>
+    <dd><%=h @user.email %></dd>
+    <dt>Registered at</dt>
+    <dd><%=h @user.created_at %></dd>
+    <dt>User company</dt>
+    <dd>
+      <% if !@user.company.nil? %>
+      <%= link_to @user.company.name, company_path(@user.company.id) %>
+      <% else %>
+      <%= link_to 'New company', new_company_path %><br />
+      <% end %>
+    </dd>
+  </dl>
+</div>  
+<% unless @user.company.blank? %>
+  <div class="right profile_company grid7">
+    <h3>Company<%= "<small>" + link_to('Edit', edit_company_path(@user.company.id)) + "</small>" unless current_user != @user %></h3>
+    <dl>
+      <dt>Name</dt>
+      <dd><%=h @user.company.name %></dd>
+      <dt>Website</dt>
+      <dd><%= link_to @user.company.website, @user.company.website %></dd>
+      <dt>Employees</dt>
+      <dd>
+        <% unless @user.company.employees.blank? %>
+          <ul>
+            <% @user.company.employees.each do |e| %>
+              <li><%= link_to e.login, profile_path(e.id) %></li>
+            <% end  %>
+          </ul>   
+        <% end %>
+      </dd>
+    </dl>
+  </div> 
+<% end %>

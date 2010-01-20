@@ -159,7 +159,7 @@ small {
 } 
 #content .login a {  
 	float: right;
-	margin: 5px 20px;
+	margin: 5px 25px;
 }
 #content .login input[type=checkbox] {
 	width: 20px;
@@ -190,7 +190,55 @@ small {
 }
 #content ul.jobs li span {
 	color: #858585;
-}  
+} 
+#content .account h2 {
+	width: 550px;
+	margin-bottom: 20px;
+}
+#content .account .gravatar, #content .profile .gravatar {
+	border: 5px solid #E7E3DD;
+}
+#content .account dl, #content .profile dl {
+	float: left;
+	padding: 10px;
+	padding-left: 0;
+	width: 550px;
+	border-top: 1px solid #D4D4D4;
+} 
+#content .profile dl {
+	width: 500px;
+}
+#content .account dt, #content .profile dt {
+	float:left;
+	padding:7.5px 10px;
+	clear: both;
+}
+#content .account dd, #content .profile dd {
+	border-bottom:1px solid #D4D4D4;
+	color:#A6A6A6;
+	display:block;
+	padding:7px 10px;
+	text-align:right;
+}                    
+#content .profile_company dl {
+	float: left;
+	padding: 10px;
+	padding-left: 0;
+	width: 390px;
+	border-top: 1px solid #D4D4D4;
+} 
+#content .profile_company dt {
+	float:left;
+	padding:7.5px 10px;
+	clear: both;
+}
+#content .profile_company dd {
+	border-bottom:1px solid #D4D4D4;
+	color:#A6A6A6;
+	display:block;
+	padding:7px 10px;
+	text-align:right;
+}
 #content .list h2 {
 	margin-bottom: 10px;
 }
@@ -214,7 +262,7 @@ small {
 #content .list table caption {
 	display: none;
 }      
-#content .events h2, #content .companies h2, #content .jobs h2 {
+#content .account h2, #content .events h2, #content .companies h2, #content .jobs h2 {
 	margin-bottom: 10px; 
 }    
 #content .events .place {
@@ -233,6 +281,7 @@ small {
 }
 #content .events .place #map {
 	margin: 10px 0 0 0;
+	border: 10px solid #E7E3DD;
 }
 #content .companies h3 {
 	font-weight: bold;
@@ -245,6 +294,7 @@ small {
 #content .companies .info ul {
 	margin: 5px;
 }
+#content .account h2 small, #content .profile h3 small, #content .profile_company h3 small,
 #content .jobs h3 small, #content .events h3 small, #content .companies h3 small, #content .list h2 small {
 	float: right;
 	margin-right: 15px;
