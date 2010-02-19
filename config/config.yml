@@ -9,6 +9,6 @@ development:
   site_email: admin@barcelonaonrails.com
   
 production:
-  layout: coming
+  layout: layout
   site_url: barcelonaonrails.com
   site_email: admin@barcelonaonrails.com
