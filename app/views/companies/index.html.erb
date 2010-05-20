@@ -19,7 +19,7 @@
       <% @companies.each do |company| %>  
         <tr>
           <td class="company_name"><%= link_to company.name, company %></td>    
-          <td class="company_website"><%=h company.website %></td>
+          <td class="company_website"><%= link_to company.website, company.website %></td>
           <td class="company_location"><%=h company.location %></td>
         </tr>
       <% end %>
