@@ -11,14 +11,12 @@
     <dd><%=h @user.email %></dd>
     <dt>Registered at</dt>
     <dd><%=h @user.created_at %></dd>
-    <dt>User company</dt>
-    <dd>
-      <% if !@user.company.nil? %>
-      <%= link_to @user.company.name, company_path(@user.company.id) %>
-      <% else %>
-      <%= link_to 'New company', new_company_path %><br />
-      <% end %>
-    </dd>
+    <% if !@user.company.nil? %>
+      <dt>User company</dt>
+      <dd>
+        <%= link_to @user.company.name, company_path(@user.company.id) %>
+      </dd>
+    <% end %>
   </dl>
 </div>  
 <% unless @user.company.blank? %>
