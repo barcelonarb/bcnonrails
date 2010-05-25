@@ -164,6 +164,9 @@ small {
 #content .login input[type=checkbox] {
 	width: 20px;
 }
+#content .login select {
+	margin: 5px 5px;
+}
 #content .login input[type=submit] {
 	margin: 10px 0 5px 75px;
 } 
