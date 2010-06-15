@@ -6,7 +6,12 @@ class Company < ActiveRecord::Base
   has_many :employees, :class_name => 'User'
   has_many :jobs
   
-  before_save :geocode_location
+  before_save :geocode_location, :url_format
   
   named_scope :random, lambda { |random| {:order => "RAND()", :limit => random }}
+  
+  protected
+    def url_format
+      self.website = "http://" + self.website.to_s unless /http:\/\/|https:\/\//.match(self.website) 
+    end
 end

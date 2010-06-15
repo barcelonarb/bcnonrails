@@ -2,6 +2,11 @@
 <%= form.text_field :login %>
 <%= form.label :email %>
 <%= form.text_field :email %>
+<% if params[:action] == "edit" %>
+  <%= form.label :company_id, "Company", :class => "clear" %> 
+  <%= select("user", "company_id", @companies.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'}) %>
+  <%= link_to 'New company', new_company_path %>
+<% end %>
 <%= form.label :password, form.object.new_record? ? nil : "Change password" %>
 <%= form.password_field :password %>
 <%= form.label :password_confirmation %>
