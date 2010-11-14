@@ -5,3 +5,7 @@ config/deploy.rb
 
 #Mac
 .DS_Store
+
+#eclipse
+.project
+.settings
