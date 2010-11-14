@@ -25,7 +25,7 @@
     <ul class="left grid6 events">
       <h2>Events</h2>
       <% @events.each do |event| %>
-        <li><%= link_to(event.title, event_path(event), :title => event.title) + " <small>at</small> <span>#{event.location[0..30]}...</span>" %></li>
+        <li><%= link_to(event.title, event_path(event), :title => event.title) %> <small>at</small> <span><%= event.location[0..30] %>...</span></li>
       <% end %>
     </ul>
   <% end %>
@@ -33,7 +33,7 @@
     <ul class="right grid6 jobs">
       <h2>Jobs</h2>
       <% @jobs.each do |job| %>
-        <li><%= link_to(job.title, job_path(job), :title => job.title) + " <small>at</small> <span>#{job.company.name}</span>"  %></li>
+        <li><%= link_to(job.title, job_path(job), :title => job.title) %> <small>at</small> <span><%= job.company.name %></span></li>
       <% end %>
     </ul>
   <% end %>
