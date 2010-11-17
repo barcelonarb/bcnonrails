@@ -12,7 +12,7 @@ module ApplicationHelper
     unless location.nil? || !location.geocoded?
       map = GMap.new id
       map.control_init
-      map.center_zoom_on_points_init location.lat_lng_pair
+      map.center_zoom_init location.lat_lng_pair, 15
       map.overlay_init GMarker.new(location.lat_lng_pair)
       
       content_for(:javascript) { map.to_html }
