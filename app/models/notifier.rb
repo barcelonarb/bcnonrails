@@ -16,5 +16,14 @@ class Notifier < ActionMailer::Base
     sent_on       Time.now  
     body          :event_url => event_url(event),
                   :event => event
+  end
+  
+  def job_to_bcnonrails(job)
+    subject       "New job offer: #{job.title}"
+    from          APP_CONFIG[:site_email]  
+    recipients    "barcelonaonrails@googlegroups.com"  
+    sent_on       Time.now  
+    body          :job_url => job_url(job),
+                  :job => job
   end  
 end

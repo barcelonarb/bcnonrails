@@ -3,4 +3,10 @@ class Job < ActiveRecord::Base
   
   belongs_to :company
   belongs_to :user
+  
+  after_create :deliver_job_to_bcnonrails!
+  
+  def deliver_job_to_bcnonrails!        
+    Notifier.deliver_job_to_bcnonrails(self)
+  end
 end
