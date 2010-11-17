@@ -1,0 +1,2 @@
+BcnOnRails::Application.config.secret_token = '03be57122f42b9e2a33aea4d23d41a48454854a74ae51485f87910e2704deee3cfff5ecc1e3819d8e6ba09ec23dd7776b5a0ddaa97b539ec2134d049ee203ab7'
+
