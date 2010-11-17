@@ -6,7 +6,7 @@ class Event < ActiveRecord::Base
   named_scope :next, :conditions => ['date > ?', DateTime.now - 2.hours], :order => 'date asc'
   
   before_save :geocode_location 
-  after_save :deliver_event_to_bcnonrails!
+  after_create :deliver_event_to_bcnonrails!
   
   def deliver_event_to_bcnonrails!        
     Notifier.deliver_event_to_bcnonrails(self)
