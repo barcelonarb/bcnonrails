@@ -16,3 +16,7 @@ config/deploy.rb
 
 #rvm
 .rvmrc
+
+
+#tmp files
+*.orig
