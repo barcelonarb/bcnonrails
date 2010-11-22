@@ -15,6 +15,7 @@
     <title><%= yield(:title)+ " -" unless yield(:title).blank? %> Barcelona on Rails</title>
 
     <%= stylesheet_link_tag 'style' %>
+    <%= yield :head%>
   </head>
   <body>
     <div id="box">

@@ -4,11 +4,13 @@ class User < ActiveRecord::Base
   belongs_to  :company
   has_many    :jobs
 
-  named_scope :random, lambda { |random| {:order => "login ASC", :limit => random }} #TODO: implement cross-database random
-
   def deliver_password_reset_instructions!
     reset_perishable_token!
     Notifier.deliver_password_reset_instructions(self)
+  end
+
+  def self.random number
+    (1..number).map{|u| self.offset(rand self.count).limit(1).first}
   end
 end
 

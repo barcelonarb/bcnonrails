@@ -8,7 +8,9 @@ class Company < ActiveRecord::Base
 
   before_save :geocode_location, :url_format
 
-  named_scope :random, lambda { |random| {:order => "name ASC", :limit => random }} #TODO: implement cross-database random
+  def self.random number
+    (1..number).map{|u| self.offset(rand self.count).limit(1).first}
+  end
 
   protected
     def url_format
