@@ -1,3 +1,4 @@
+require "geocodable"
 class Company < ActiveRecord::Base
   include Geocodable
 
@@ -9,7 +10,8 @@ class Company < ActiveRecord::Base
   before_save :geocode_location, :url_format
 
   def self.random number
-    (1..number).map{|u| self.offset(rand self.count).limit(1).first}
+    total=self.count
+    (1..[number,total].min).map{|u| self.offset(rand(total).floor).limit(1).first}
   end
 
   protected

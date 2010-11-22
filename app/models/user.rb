@@ -4,13 +4,16 @@ class User < ActiveRecord::Base
   belongs_to  :company
   has_many    :jobs
 
+  def self.random number
+    total=self.count
+    (1..[number,total].min).map{|u| self.offset(rand(total).floor).limit(1).first}
+  end
+
   def deliver_password_reset_instructions!
     reset_perishable_token!
     Notifier.deliver_password_reset_instructions(self)
   end
 
-  def self.random number
-    (1..number).map{|u| self.offset(rand self.count).limit(1).first}
-  end
+
 end
 
