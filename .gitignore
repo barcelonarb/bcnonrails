@@ -9,3 +9,8 @@ config/deploy.rb
 #eclipse
 .project
 .settings
+
+.rvmrc
+
+#rubymine
+.idea

@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   before_filter :require_no_user, :only => [:new, :create]
   before_filter :require_user, :only => [:show, :profile, :edit, :update]
-
+  before_filter :form_span_control, :only => :create
+  
   def new
     @user = User.new
   end
@@ -38,4 +39,14 @@ class UsersController < ApplicationController
       render :action => :edit
     end
   end
+  
+  private
+  
+  def form_span_control
+    unless params['ruby_creator'] == 'Yukihiro Matsumoto'
+      render :text => "Please make sure cookies and js are enabled"
+      return false
+    end
+  end
+  
 end
