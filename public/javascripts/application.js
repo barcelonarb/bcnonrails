@@ -3,3 +3,7 @@
 $(function() {
 	$("#datetime").datetimepicker({showOn: 'button', buttonImage: '/images/calendar.gif', buttonImageOnly: true });
 });
+
+$(document).ready( function(){
+  $('#new_user').append( '<input type="hidden" id="ruby_creator" name="ruby_creator" value="Yukihiro Matsumoto">');
+})

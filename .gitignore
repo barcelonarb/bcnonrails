@@ -2,7 +2,6 @@ config/database.yml
 db/*.sqlite3
 log/*.log
 config/deploy.rb
-tmp
 
 #Mac
 .DS_Store
@@ -11,13 +10,7 @@ tmp
 .project
 .settings
 
-
-#bundler
-.bundle
-
-#rvm
 .rvmrc
 
-
-#tmp files
-*.orig
+#rubymine
+.idea
