@@ -3,7 +3,7 @@
 <div class="login grid7 clear">
   <h2><%= yield(:title) %></h2>
 
-  <% form_for @user_session, :url => user_session_path do |f| %>
+  <% form_for @user_session, :as => :user_session, :url => { :action => 'create' } do |f| %>
     <%= f.error_messages %><br class="clear" />
     <%= f.label :login %>
     <%= f.text_field :login %>   

@@ -43,8 +43,8 @@
               <% end %>
             </div>
         </ul>
-        <%= "<div id='error'><span>#{flash[:error].html_safe}</span></div><br class='clear' />" unless flash[:error].blank? %>
-        <%= "<div id='notice'><span>#{flash[:notice].html_safe}</span></div><br class='clear' />" unless flash[:notice].blank? %>
+        <%= raw "<div id='error'><span>#{flash[:error]}</span></div><br class='clear' />" unless flash[:error].blank? %>
+        <%= raw "<div id='notice'><span>#{flash[:notice]}</span></div><br class='clear' />" unless flash[:notice].blank? %>
         <%= yield %>
       </div>
 

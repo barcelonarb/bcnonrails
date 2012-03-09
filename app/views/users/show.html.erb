@@ -29,7 +29,7 @@
       <% if !@user.company.nil? %>
       <%= link_to @user.company.name, company_path(@user.company.id) %>
       <% else %>
-      <%= link_to 'Add company', account_path %><br />
+      <%= link_to 'Add company', new_company_path %><br />
       <% end %>
     </dd>
   </dl>

@@ -1,7 +1,7 @@
-<%= title @job.title + " - Jobs" %>
+<%= title (@job.title + " - Jobs").html_safe %>
 <div class="left grid16 jobs">
-  <h2>Jobs</h2>
-  <h3><%= @job.title %><%= "<small>" + link_to('Edit', edit_job_path(@job)) + "</small>" unless current_user != @job.user %></h3>
+  <h2>Job</h2>
+  <h3><%= @job.title %><%= raw "<small>" + link_to('Edit', edit_job_path(@job)) + "</small>" unless current_user != @job.user %></h3>
 
   <div class="left grid11 jobs">
     <div class="markdown">
