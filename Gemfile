@@ -6,6 +6,8 @@ gem 'authlogic'
 gem 'geokit'
 gem 'bluecloth'
 gem 'dynamic_form'
+gem 'jquery-rails'
+gem 'unicorn'
 
 group :development do
   gem 'capistrano'
