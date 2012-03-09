@@ -1,6 +1,6 @@
 <% title "Next events" %>    
 <div class="grid16 left list">
-  <h2><%= yield(:title)%><%= "<small>" + link_to('New event', new_event_path)  + "</small>" if current_user %></h2>
+  <h2><%= yield(:title)%><%= ("<small>" + link_to('New event', new_event_path)  + "</small>").html_safe if current_user %></h2>
   <table summary="Event lists">
     <caption>Event lists</caption> 
     <colgroup>

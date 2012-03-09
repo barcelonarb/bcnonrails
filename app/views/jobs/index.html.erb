@@ -1,6 +1,6 @@
 <% title "Jobs" %>   
 <div class="grid16 left list">
-  <h2><%= yield(:title) %><%= "<small>" + link_to('New job', new_job_path)  + "</small>" if current_user %></h2>
+  <h2><%= yield(:title) %><%= raw "<small>" + link_to('New job', new_job_path)  + "</small>" if current_user %></h2>
   <table summary="Jobs list">
     <caption>Jobs list</caption> 
     <colgroup>

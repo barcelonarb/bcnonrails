@@ -1,6 +1,6 @@
 <% title 'account' %>
 <div class="account left grid16">
-  <h2><%= yield(:title).capitalize %><%= "<small>" + link_to('Edit', edit_account_path) + "</small>" unless current_user != @user %></h2>
+  <h2><%= yield(:title).capitalize %><%= ("<small>" + link_to('Edit', edit_account_path) + "</small>").html_safe unless current_user != @user %></h2>
   <dl>
     <dt>Gravatar</dt>
     <dd><%= gravatar_for @user, :alt => @user.login %></dd>

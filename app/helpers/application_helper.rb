@@ -15,8 +15,8 @@ module ApplicationHelper
       map.center_zoom_init location.lat_lng_pair, 15
       map.overlay_init GMarker.new(location.lat_lng_pair)
       
-      content_for(:javascript) { map.to_html }
-      map.div(:width => width, :height => height) 
+      content_for(:javascript) { map }
+      map.div(:width => width, :height => height).html_safe
     end
   end
   
@@ -26,5 +26,15 @@ module ApplicationHelper
     else
       "selected" if params[:controller] == controller && params[:action] == action
     end
+  end
+
+  # Format text for display.                                                                    
+  def format(text)
+    sanitize(markdown(text))
+  end
+
+  # Process text with Markdown.                                                                 
+  def markdown(text)
+    BlueCloth::new(text).to_html.html_safe
   end
 end

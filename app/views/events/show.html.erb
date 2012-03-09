@@ -3,7 +3,7 @@
   <h2>Events</h2>           
   <div class="left grid16 place">
     <div class="left grid7">
-      <h3><%= @event.title %><%= "<small>" + link_to('Edit', edit_event_path(@event)) + "</small>" if current_user %></h3>
+      <h3><%= @event.title %><%= raw "<small>" + link_to('Edit', edit_event_path(@event)) + "</small>" if current_user %></h3>
       <div class="markdown">
         <strong>Description:</strong>
         <%= markdown @event.description %>
