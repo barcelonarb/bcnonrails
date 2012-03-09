@@ -84,6 +84,8 @@
     <link media="all" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" rel="stylesheet" -->
     <%= GMap.header.html_safe %>
     <%= javascript_include_tag 'application', 'jquery.date.time.picker' %>
-    <%= yield(:javascript) %>
+    <div name="pepe">
+        <%= content_for :javascript %>
+    </div>
   </body>
 </html>

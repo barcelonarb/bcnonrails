@@ -15,7 +15,7 @@ module ApplicationHelper
       map.center_zoom_init location.lat_lng_pair, 15
       map.overlay_init GMarker.new(location.lat_lng_pair)
       
-      content_for(:javascript) { map }
+      content_for(:javascript) { map.to_html.html_safe }
       map.div(:width => width, :height => height).html_safe
     end
   end
