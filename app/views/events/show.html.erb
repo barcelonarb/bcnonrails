@@ -17,8 +17,8 @@
       <p>
         <strong>Date:</strong>
         <%=h @event.date.strftime("%Y/%m/%d - %H:%mh.") %>
-      </p>   
-      <%= location_map(@event, '460', '300') %>
+      </p>
+      <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@event.lat}%2C#{@event.lng}", size: "460x300" %>
     </div>
   </div>
 </div>

@@ -2,7 +2,8 @@
   <% if @event %>
     <h2>Next event</h2>
     <div class="left grid9">
-      <h3><%= location_map(@event, '522', '180', 'home_map') %></h3>
+      <h3>
+        <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@event.lat}%2C#{@event.lng}", size: "522x180" %>
     </div>
     <div class="right grid7 event_description">
       <h3><%= link_to @event.title, event_path(@event) %></h3>
