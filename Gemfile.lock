@@ -46,6 +46,7 @@ GEM
     dynamic_form (1.1.4)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    geocoder (1.1.6)
     geokit (1.5.0)
     gravatar_image_tag (1.1.3)
     highline (1.6.1)
@@ -116,10 +117,11 @@ DEPENDENCIES
   capistrano-ext
   capistrano_colors
   dynamic_form
+  geocoder
   geokit
   gravatar_image_tag
   jquery-rails
   mysql2
   provizioning
-  rails (~> 3.0.1)
+  rails (~> 3.0.20)
   unicorn
