@@ -3,7 +3,7 @@
   <h2><%= yield(:title).capitalize %><%= ("<small>" + link_to('Edit', edit_account_path) + "</small>").html_safe unless current_user != @user %></h2>
   <dl>
     <dt>Gravatar</dt>
-    <dd><%= gravatar_for @user, :alt => @user.login %></dd>
+    <dd><%= gravatar_image_tag @user.email, :alt => @user.login %></dd>
     <dt>Login</dt>
     <dd><%=h @user.login %></dd>
     <dt>Email</dt>

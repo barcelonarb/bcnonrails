@@ -16,7 +16,7 @@
     <h2>Users</h2>
     <ul class="left grid16 users">
       <% @users.each do |user| %>
-        <li><%= link_to gravatar_for(user, :alt => user.login), profile_path(:id => user.id), :title => user.login %></li>
+        <li><%= link_to gravatar_image_tag(user.email, :alt => user.login), profile_path(:id => user.id), :title => user.login %></li>
       <% end %>
     </ul>
   <% end %>

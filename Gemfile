@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 gem 'rails', '~>3.0.1'
 gem 'mysql2'
@@ -8,6 +8,7 @@ gem 'bluecloth'
 gem 'dynamic_form'
 gem 'jquery-rails'
 gem 'unicorn'
+gem 'gravatar_image_tag'
 
 group :development do
   gem 'capistrano'

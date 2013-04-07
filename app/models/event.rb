@@ -10,7 +10,7 @@ class Event < ActiveRecord::Base
   after_create :deliver_event_to_bcnonrails!
 
   def deliver_event_to_bcnonrails!
-    Notifier.deliver_event_to_bcnonrails(self)
+    Notifier.event_to_bcnonrails(self).deliver
   end
 end
 
