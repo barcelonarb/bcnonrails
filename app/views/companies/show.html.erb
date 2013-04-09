@@ -2,7 +2,7 @@
 <div class="grid16 left companies">  
   <h2>Company</h2>
   <h3><%= yield(:title) %><%= raw "<small>" + link_to('Edit', edit_company_path(@company)) + "</small>" if current_user %></h3>
-  <%= location_map @company %>   
+      <%= image_tag "http://maps.google.com/maps/api/staticmap?size=522x180&sensor=false&zoom=16&markers=#{@company.lat}%2C#{@company.lng}" %>
   <div class="info grid7 left">
     <p>
       <strong>Website:</strong>
