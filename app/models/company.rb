@@ -1,13 +1,13 @@
 require "geocodable"
 class Company < ActiveRecord::Base
-  include Geocodable
+  geocoded_by :location, :latitude  => :lat, :longitude => :lng
 
   validates_presence_of :name
 
   has_many :employees, :class_name => 'User'
   has_many :jobs
 
-  before_save :geocode_location, :url_format
+  after_validation :geocode, :if => :location_changed?
 
   def self.random number
     total=self.count
