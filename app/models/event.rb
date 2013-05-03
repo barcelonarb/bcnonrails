@@ -1,6 +1,5 @@
 #require "geocodable"
 class Event < ActiveRecord::Base
-  #include Geocodable
   geocoded_by :location, :latitude  => :lat, :longitude => :lng
 
   validates_presence_of :date, :title, :location
