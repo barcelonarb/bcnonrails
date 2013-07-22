@@ -4,7 +4,7 @@ class Event < ActiveRecord::Base
 
   validates_presence_of :date, :title, :location
 
-  scope :next, :conditions => ['date > ?', DateTime.now - 2.hours], :order => 'date asc'
+  scope :next, :order => 'date asc'
 
   after_validation :geocode, :if => :location_changed?
   after_create :deliver_event_to_bcnonrails!
