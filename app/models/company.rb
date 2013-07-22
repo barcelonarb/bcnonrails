@@ -5,7 +5,7 @@ class Company < ActiveRecord::Base
   validates_presence_of :name
 
   has_many :employees, :class_name => 'User'
-  has_many :jobs
+  has_many :jobs, :dependent => :delete_all
 
   after_validation :geocode, :if => :location_changed?
 

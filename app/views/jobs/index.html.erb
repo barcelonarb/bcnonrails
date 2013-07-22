@@ -19,7 +19,7 @@
       <% @jobs.each do |job| %>  
         <tr>
           <td class="job_title"><%= link_to job.title, job %>  </td>    
-          <td class="job_company_name"><%= link_to job.company.name, company_path(job.company.id) %></td>
+          <td class="job_company_name"><%= link_to job.company.name, company_path(job.company.id) if job.company.present? %></td>
           <td class="job_created"><%=h job.created_at %></td>
         </tr>
       <% end %>
