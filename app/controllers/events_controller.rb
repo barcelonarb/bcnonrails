@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_filter :require_user, :except => [:index, :show]
   
   def index
-    @events = Event.next.all
+    @events = Event.all
   end
 
   def show
