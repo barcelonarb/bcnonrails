@@ -3,7 +3,7 @@ class JobsController < ApplicationController
   before_filter :should_be_current_user, :only => [:edit, :update, :destroy]
   
   def index
-    @jobs = Job.all(:order => "created_at DESC")
+    @jobs = Job.where('created_at > ?', 1.year.ago).order("created_at DESC")
   end
 
   def show
