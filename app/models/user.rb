@@ -1,19 +1,25 @@
 class User < ActiveRecord::Base
-  acts_as_authentic
+  devise :database_authenticatable, :registerable, :confirmable,
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
-  belongs_to  :company
-  has_many    :jobs
+  has_many :authentications, dependent: :destroy
 
-  def self.random number
-    total=self.count
-    (1..[number,total].min).map{|u| self.offset(rand(total).floor).limit(1).first}
+  def self.new_with_session(params, session)
+    user = super
+    user.apply_oauth(session['devise.oauth'])
+    user
   end
 
-  def deliver_password_reset_instructions!
-    reset_perishable_token!
-    Notifier.deliver_password_reset_instructions(self)
+  def apply_oauth(auth = {})
+    if auth.present?
+      oauth_email = auth['info'] && auth['info']['email']
+
+      self.email = oauth_email if email.blank?
+      authentications.build(provider: auth['provider'], uid: auth['uid'])
+    end
   end
 
-
+  def password_required?
+    (authentications.empty? || !password.blank?) && super
+  end
 end
-

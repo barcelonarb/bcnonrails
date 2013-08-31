@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= page_title(yield(:title)) %></title>
+  <meta name="description" content="<%= yield(:description) %>"></meta>
+
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div>
+    <% if user_signed_in? %>
+      <ul>
+        <li>Welcome <%= current_user.email %></li>
+        <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+      </ul>
+    <% else %>
+      <%= link_to 'Sign in', new_user_session_path %>
+    <% end %>
+  </div>
+
+  <% %w(notice alert).each do |key| %>
+    <% unless flash[key.to_sym].blank? %>
+      <div id="flash_<%= key %>" class="flash <%= key %> clearfix">
+        <%= flash[key.to_sym] %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <%= yield %>
+</body>
+</html>

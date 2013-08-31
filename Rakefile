@@ -3,7 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-require 'rake'
-
 BcnOnRails::Application.load_tasks
-
