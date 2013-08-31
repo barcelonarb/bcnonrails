@@ -25,6 +25,11 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.datetime :confirmation_sent_at
       t.string   :unconfirmed_email # Only if using reconfirmable
 
+      t.string  :nickname
+      t.string  :name
+      t.string  :website
+      t.text    :biography
+
       t.timestamps
     end
 

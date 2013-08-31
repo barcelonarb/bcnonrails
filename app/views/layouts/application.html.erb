@@ -12,7 +12,7 @@
   <div>
     <% if user_signed_in? %>
       <ul>
-        <li>Welcome <%= current_user.email %></li>
+        <li>Welcome <%= current_user.nickname %></li>
         <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
       </ul>
     <% else %>
