@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_many :authentications, dependent: :destroy
 
-  validates :nickname, presence: true
+  validates :nickname, presence: true, uniqueness: true
 
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
