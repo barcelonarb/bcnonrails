@@ -18,6 +18,8 @@ gem 'therubyracer', platforms: :ruby
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'factory_girl_rails'
+  
   gem 'debugger'
   gem 'foreman'
 end
