@@ -39,4 +39,4 @@ module BcnOnRails
     config.filter_parameters += [:password, :password_confirmation]
   end
 end
-
+ActionController::Base.config.relative_url_root = ''
